@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Websitesi</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Yazılım Makaleleri</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto my-lg-0 my-2">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Anasayfa</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown">
+            Görünüm Tercihleri
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="full.html">Tam Sayfa</a></li>
+            <li><a class="dropdown-item" href="right.html">Sağda Sidebar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="contact.html">İletişim</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="min-vh-100 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-white shadow rounded-3 p-md-5 p-3">
+                    <h2 class="text-center fs-1 fw-bold">Bizimle İletişime Geçin</h2>
+                    <div class="pt-5">
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-6">
+                              <label class="form-label">Adınız</label>
+                              <input type="text" class="form-control" required>
+                              <div class="valid-feedback">
+                                Başarılı!
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <label class="form-label">Soyadınız</label>
+                              <input type="text" class="form-control" required>
+                              <div class="valid-feedback">
+                                Başarılı!
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Konu</label>
+                                <select class="form-select" required>
+                                  <option selected value="">Konu seçiniz...</option>
+                                  <option value="1">Sponsor</option>
+                                  <option value="2">Yazarlık</option>
+                                  <option value="3">Dilek/Öneri</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Lütfen konu seçiniz.
+                                </div>
+                                <div class="valid-feedback">
+                                    Başarılı!
+                                  </div>
+                              </div>
+                              <div class="col-md-12">
+                                <label class="form-label">Mesajınız</label>
+                                <textarea class="form-control" rows="10" required></textarea>
+                                <div class="invalid-feedback">
+                                    Lütfen mesajınızı giriniz.
+                                  </div>
+                                  <div class="valid-feedback">
+                                      Başarılı!
+                                    </div>
+                              </div>
+                            <div class="col-12">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" required>
+                                <label class="form-check-label">
+                                  Kullanım koşullarını okudum, kabul ediyorum.
+                                </label>
+                                <div class="invalid-feedback">
+                                  Kullanım koşullarını kabul etmelisiniz.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <button class="btn btn-primary" type="submit">Gönder</button>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark">
+  <p class="py-3 text-white mb-0 text-center">
+    Copyright © 2023 All Rights Reserved | <a class="fst-italic text-decoration-none" href="#">New Developer</a>
+  </p>
+</footer>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+</body>
+</html>
